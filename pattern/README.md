@@ -21,5 +21,6 @@
 * [模版模式](template_method_design/main.go)
 * [策略模式](strategy_design/main.go)
 * [职责链模式](chain_of_responsibility_design_pattern/main.go)
+* [状态模式](state_design/main.go)
 
     
