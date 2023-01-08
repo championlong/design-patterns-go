@@ -6,7 +6,7 @@ type IUser interface {
 }
 
 type IUserFacade interface {
-	LoginOrRegister(phone int, code int) error
+	LoginOrRegister(phone int, code int) (*User, error)
 }
 
 type User struct {

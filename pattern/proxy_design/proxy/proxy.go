@@ -23,10 +23,8 @@ func NewUserProxy(user *User) *UserProxy {
 
 func (p *UserProxy) Login(username, password string) error {
 	// 可以再次方法中做其余处理
-
 	if err := p.user.Login(username, password); err != nil {
 		return err
 	}
-
 	return nil
 }

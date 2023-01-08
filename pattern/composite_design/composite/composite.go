@@ -1,5 +1,6 @@
 package composite
 
+// IOrganization 组织接口，实现统计人数的功能
 type IOrganization interface {
 	Count() int
 }
