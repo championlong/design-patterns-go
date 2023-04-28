@@ -1,7 +1,11 @@
 package service
 
-import "github.com/championlong/design-patterns-go/counter/vo"
+import (
+	"github.com/championlong/design-patterns-go/counter/vo"
+	"math"
+)
 
+// Aggregator 负责根据原始数据计算统计数据
 type Aggregator struct {
 }
 
@@ -40,7 +44,7 @@ func (self *Aggregator) max(dataset []float64) float64 {
 	return max
 }
 func (self *Aggregator) min(dataset []float64) float64 {
-	var min float64
+	min := math.MaxFloat64
 	for _, v := range dataset {
 		if v < min {
 			min = v

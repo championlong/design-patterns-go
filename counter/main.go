@@ -13,22 +13,15 @@ import (
 // 功能性需求: 合理地将功能划分到不同模块、设计模块与模块之间的交互关系、设计模块的接口、数据库、业务模型
 // 非功能性的需求: 考虑易用性、性能、扩展性、容错性、通用性
 // 面向对象设计和实现要做的事情，就是把合适的代码放到合适的类中。
+/*
+能够获取接口调用的各种统计信息，比如，响应时间的最大值（max）、最小值（min）、平均值（avg）、百分位值（percentile）、接口调用次数（count）、频率（tps） 等，
+并且支持将统计结果以各种显示格式（比如：JSON格式、网页格式、自定义显示格式等）输出到各种终端（Console命令行、HTTP网页、Email、日志文件、自定义输出终端等），以方便查看。
+*/
 func main() {
-	// 定时触发统计并将结果显示到终端
-	//storage := dao.RedisMetricsStorage{}
-	//aggregator := service.Aggregator{}
-	//consoleViewer := service.ConsoleViewer{}
-	//consoleReporter := service.NewConsoleReporter(&storage, aggregator, &consoleViewer)
-	//consoleReporter.StartRepeatedReport(10, 60)
-
-	//collector := collector.NewMetricsCollector(&storage)
-	//collector.RecordRequest(vo.NewRequestInfo("register", 123, 10234))
-	//collector.RecordRequest(vo.NewRequestInfo("register", 223, 11234))
-	//collector.RecordRequest(vo.NewRequestInfo("login", 23, 12434))
-
 	dao.RequestInfos = make(map[string][]vo.RequestInfo)
 
 	consoleReporter := service.NewConsoleRedisReporter()
+	// 每10秒计算60s的请求
 	go consoleReporter.StartRepeatedReport(10, 60)
 
 	metrics := collector.NewMetricsRedisCollector()

@@ -5,6 +5,7 @@ import (
 	"github.com/championlong/design-patterns-go/counter/vo"
 )
 
+// StatViewer 负责显示发送
 type StatViewer interface {
 	output(requestStats map[string]vo.RequestStat, startTimeInMillis float64, endTimeInMills float64)
 }

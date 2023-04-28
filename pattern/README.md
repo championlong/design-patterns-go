@@ -26,4 +26,6 @@
 * [访问者模式](visitor_design/main.go)
 * [备忘录模式](memento_design/main.go)
 * [命令模式](command_design/main.go)
+* [解释器模式](interpreter_design/main.go)
+* [中介模式](mediator_design/main.go)
     
