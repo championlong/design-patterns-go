@@ -4,6 +4,7 @@ import (
 	"github.com/championlong/design-patterns-go/counter/dao"
 )
 
+// ScheduledReporter 作为父类解决代码重复问题
 type ScheduledReporter struct {
 	metricsStorage dao.MetricsStorage
 	aggregator     Aggregator

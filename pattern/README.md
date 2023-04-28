@@ -23,5 +23,9 @@
 * [职责链模式](chain_of_responsibility_design_pattern/main.go)
 * [状态模式](state_design/main.go)
 * [迭代器模式](iterator_design/main.go)
-
+* [访问者模式](visitor_design/main.go)
+* [备忘录模式](memento_design/main.go)
+* [命令模式](command_design/main.go)
+* [解释器模式](interpreter_design/main.go)
+* [中介模式](mediator_design/main.go)
     
